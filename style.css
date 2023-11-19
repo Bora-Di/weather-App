@@ -5,3 +5,45 @@
     box-sizing: border-box;
     font-size: 16px;
 }
+
+body {
+    background-image: url('img/6.jpg');
+    background-size: cover;
+    -webkit-animation: slidein 100s;
+    animation: slidein 100s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes slidein {
+    from {
+        background-position: center;
+        background-size: 2000px;
+    }
+    to {
+        background-position: -100px 0px;
+        background-size: 1750px;
+    }
+}
+
+@keyframes slidein {
+    from {
+        background-position: center;
+        background-size: 2000px;
+    }
+    to {
+        background-position: -100px 0px;
+        background-size: 1750px;
+    }
+}
+
+h1 {
+    color: #ffff;
+    font-size: 1.5rem;
+    text-align: center;
+    background: #092147;
+}
