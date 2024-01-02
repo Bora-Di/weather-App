@@ -70,6 +70,26 @@ h1 {
     border: 1px solid #ccc;
 }
 
+.weather-input .separator {
+    height: 1px;
+    width: 100%;
+    margin: 25PX 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*
+.weather-input .separator::before {
+    content: "or";
+    color: #7588aa;
+    font-size: 1.18rem;
+    padding: 0 15px;
+    background: transparent;
+}
+*/
+
 .weather-input button {
     width: 100%;
     padding: 10px 0;
@@ -77,8 +97,13 @@ h1 {
     outline: none;
     border: none;
     color: #ffff;
+    font-size: 1rem;
     border-radius: 4px;
     background: #092147;
+}
+
+.weather-input .location-button {
+    background: #273958;
 }
 
 .weather-data {
