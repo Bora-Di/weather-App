@@ -1,5 +1,6 @@
 const cityInput = document.querySelector(".city-input");
 const searchButton = document.querySelector(".search-button");
+const locationButton = document.querySelector(".location-button");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardDiv = document.querySelector(".weather-cards");
 
@@ -8,18 +9,28 @@ const API_key = "485b09b08a7fe230b73c96870395c2e4";
 
 const createWeatherCard = (cityName, weatherItem, index) => {
     if(index === 0) {
-        return ``;
+        return `
+         <div class="details">
+            <h2>${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h2>
+            <h4>Temperature: ${(weatherItem.main.temp - 273.15).toFixed(2)} °C</h4>
+            <h4>Wind: ${weatherItem.wind.speed} M/S</h4>
+            <h4>Humidity: ${weatherItem.main.humidity} %</h4>
+         
+        </div>
+        <div class="icon">
+            <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather">
+            <h4>${weatherItem.weather[0].description} Rain </h4>
+        </div>`;
     }else{
         return `
             <li class="card">
-            <h3> (${weatherItem.dt_txt.split("")[0]})</h3>
+            <h3> (${weatherItem.dt_txt.split(" ")[0]})</h3>
             <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="weather">
-            <h4>Temp: ${(weatherItem.main.temp - 273015).toFixed(2)} °C</h4>
+            <h4>Temp: ${(weatherItem.main.temp - 273.15).toFixed(2)} °C</h4>
             <h4>Wind: ${weatherItem.wind.speed} M/S</h4>
             <h4>Humidity: ${weatherItem.main.humidity} %</h4>
             </li>`;
     }
-    
 }
 
 const getWeatherDetails = (cityName, lat, lon) => {
@@ -64,5 +75,27 @@ const getCityCoordinates = () => {
         alert("an erroe occurence while fetching the coordinates")
     });
 }
+const getUserCoordinates = () => {
+    navigator.geolocation.getCurrentPosition(
+        position=> {
+          const {latitude, longitude } = position.coords;
+          const REVERSE_GEOCODING_URL =`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${API_key}`;
+         
+          fetch(REVERSE_GEOCODING_URL).then(res => res.json()).then(data => {
+                const { name} = data[0];
+                getWeatherDetails(name, latitude, longitude);
+        }).catch(() => {
+            alert("an erroe occurence while fetching the city")
+        });
+       
+        },
+        error =>{
+           if(error.code === error.PERMISSION_DENIED) {
+            alert('Please enable location sharing in your browser');
+           }
+        }
+    );
+}
 
+locationButton.addEventListener("click", getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
