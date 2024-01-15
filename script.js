@@ -4,7 +4,6 @@ const locationButton = document.querySelector(".location-button");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardDiv = document.querySelector(".weather-cards");
 
-
 const API_key = "485b09b08a7fe230b73c96870395c2e4";
 
 const createWeatherCard = (cityName, weatherItem, index) => {
@@ -15,12 +14,12 @@ const createWeatherCard = (cityName, weatherItem, index) => {
             <h4>Temperature: ${(weatherItem.main.temp - 273.15).toFixed(2)} °C</h4>
             <h4>Wind: ${weatherItem.wind.speed} M/S</h4>
             <h4>Humidity: ${weatherItem.main.humidity} %</h4>
-         
         </div>
         <div class="icon">
             <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather">
             <h4>${weatherItem.weather[0].description} Rain </h4>
         </div>`;
+
     }else{
         return `
             <li class="card">
@@ -34,6 +33,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
 }
 
 const getWeatherDetails = (cityName, lat, lon) => {
+
     const WEATHER_API_URL = `http://api.openweathermap.org/data/2.5/forecast/?lat=${lat}&lon=${lon}&appid=${API_key}`;
 
     fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
@@ -66,8 +66,11 @@ const getWeatherDetails = (cityName, lat, lon) => {
 const getCityCoordinates = () => {
     const cityName = cityInput.value.trim();
     if (!cityName) return;
+    
     const GEOCODING_API_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${API_key}`;
+
     fetch(GEOCODING_API_URL).then(res => res.json()).then(data => {
+
         if (!data.length) return alert(`No coordinates found for ${cityName}`);
         const { name, lat, lon } = data[0];
         getWeatherDetails(name, lat, lon);
@@ -76,8 +79,10 @@ const getCityCoordinates = () => {
     });
 }
 const getUserCoordinates = () => {
+
     navigator.geolocation.getCurrentPosition(
         position=> {
+
           const {latitude, longitude } = position.coords;
           const REVERSE_GEOCODING_URL =`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${API_key}`;
          
