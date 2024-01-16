@@ -9,27 +9,31 @@
 </head>
 
 <body>
-    <div class="background">
+   
         <h1> Weather dashboard</h1>
-        <div class="container">
-            <div class="weather-input">
-                <div class="weather-input-container">
-                    <h3> Enter a city</h3>
-                    <input class="city-input" type="text" placeholder="E.g, NewYork, Tokyo, Paris...">
-                    <button class="search-button"> Search </button>
-                    <div class="separator"></div>
-                    <button class="location-button"> Your location </button>
-                </div>
-            </div>
-            <div class="weather-data">
-                <div class="current-weather">
-                    <div class="details">
-                        <h2>______ ( ______ )</h2>
-                        <h4>Temp: __ °C</h4>
-                        <h4>Wind: __ M/S</h4>
-                        <h4>Humidity: __ %</h4>
+      
+        <div class="container">  
+            <section class="current">
+                <div class="weather-input">
+                    <div class="weather-input-container">
+                        <h3> Enter a city</h3>
+                        <input class="city-input" type="text" placeholder="E.g, NewYork, Tokyo, Paris...">
+                        <button class="search-button"> Search </button>
+                        <div class="separator"></div>
+                        <button class="location-button"> Your location </button>
                     </div>
                 </div>
+                <div class="weather-data">
+                    <div class="current-weather">
+                        <div class="details">
+                            <h2>______ ( ______ )</h2>
+                            <h4>Temp: __ °C</h4>
+                            <h4>Wind: __ M/S</h4>
+                            <h4>Humidity: __ %</h4>
+                        </div>
+                    </div>
+            </section>
+            <section class="forecast">
                 <div class="days-forecast">
                     <h2>5-Day Forecast</h2>
                     <ul class="weather-cards">
@@ -65,9 +69,9 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </section>
         </div>
-    </div>
+    
     <script src="script.js"></script>
 </body>
 

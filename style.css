@@ -10,6 +10,7 @@ font-family: 'Poppins', sans-serif;
 body {
 width: 100%;
 background-color: rgb(12, 19, 31);
+opacity: 0.5;
 }
 /*
 body {
