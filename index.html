@@ -10,18 +10,43 @@
 
 <body>
    
-        <h1> Weather dashboard</h1>
-      
+    <header class="header">
+
+        <!------- logo    -------->
+        <h1> Weather </h1>
+        <!------- navbar list    -------->
+        <nav class="navbar">
+            <div class="weather-input">
+                <form action="/action_page.php">
+                    <input class="city-input" type="text" placeholder="E.g, NewYork, Tokyo, Paris...">
+                    <button class="search-button"> Search
+                    <i class="fa fa-search"></i></button>
+                </form>
+                 </div>
+                 <button class="location-button"> Your location </button>
+             
+
+              <!--
+            <div class="weather-input">
+                    <input class="city-input" type="text" placeholder="E.g, NewYork, Tokyo, Paris...">
+                    <button class="search-button"> Search </button>
+                    <button class="location-button"> Your location </button>
+             </div>-->
+        </nav>
+    
+    </header>
+
+
         <div class="container">  
-                <div class="weather-input">
-                    <div class="weather-input-container">
+               <!--   <div class="weather-input">
+                  <div class="weather-input-container">
                         <h3> Enter a city</h3>
                         <input class="city-input" type="text" placeholder="E.g, NewYork, Tokyo, Paris...">
                         <button class="search-button"> Search </button>
                         <div class="separator"></div>
                         <button class="location-button"> Your location </button>
                     </div>
-                </div>
+                </div>--->
                 <div class="weather-data">
                     <div class="current-weather">
                         <div class="details">
