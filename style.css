@@ -142,8 +142,8 @@ gap: 20px;
 .weather-cards .card {
 content: '';
 list-style: none;
-padding: 18px 16px;
-width: calc(100% / 5);
+padding: 17px 15px;
+width: calc(90% / 5);
 position: relative;
 color: #fff;
 background: inherit;
@@ -166,13 +166,13 @@ padding: 20px;
 flex-wrap: wrap;
 }
 .weather-cards .card {
-width: calc(100% / 5- 15px);
+width: calc(90% / 5- 15px);
 }
 }
 
 @media (max-width: 1200px) {
 .weather-cards .card {
-width: calc(100% / 4 - 15px);
+width: calc(90% / 3- 15px);
 }
 }
 
