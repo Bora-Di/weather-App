@@ -4,47 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
     <link rel="stylesheet" href="style.css">
     <title> Weather app</title>
 </head>
 
 <body>
-   
+   <div class="content-wrapper">
     <header class="header">
-        <h1> Weather </h1>
-        <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img src="img/logo2.png" alt=""></a>
+        </div>
+        <nav class="navbar" id="topnav">
             <div class="weather-input">
                 <form action="#">
                     <input class="city-input" type="text" placeholder="E.g, NewYork, Tokyo, Paris...">
                     <button class="search-button"> Search
-                    <i class="fa fa-search"></i></button>
                     <button class="location-button"> Your location </button>
+                    
                 </form>
-                 </div>
-                 
-             
-
-              <!--
-            <div class="weather-input">
-                    <input class="city-input" type="text" placeholder="E.g, NewYork, Tokyo, Paris...">
-                    <button class="search-button"> Search </button>
-                    <button class="location-button"> Your location </button>
-             </div>-->
+                </div>
         </nav>
-    
-    </header>
-
-
+        </header>
         <div class="container">  
-               <!--   <div class="weather-input">
-                  <div class="weather-input-container">
-                        <h3> Enter a city</h3>
-                        <input class="city-input" type="text" placeholder="E.g, NewYork, Tokyo, Paris...">
-                        <button class="search-button"> Search </button>
-                        <div class="separator"></div>
-                        <button class="location-button"> Your location </button>
-                    </div>
-                </div>--->
                 <div class="weather-data">
                     <div class="current-weather-bg">
                         <div class="current-weather">
@@ -93,8 +75,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/animation.js"></script>
     
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 
 
