@@ -11,110 +11,117 @@ font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-image: url('img/8.jpg');
-    background-position: center;
-    z-index: -1;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-image: url('img/8.jpg');
+background-position: center;
+z-index: -1;
 }
 
 
 .header {
-    position: relative;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 50px;
-    padding: 33px;
-    background-image: linear-gradient(to bottom,#632b6c96, #c86b9896);
-    color: #ffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    z-index: 100;
+position: relative;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 50px;
+padding: 33px;
+background-image: linear-gradient(to bottom,#632b6c96, #c86b9896);
+color: #ffff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-radius: 5px;
+z-index: 100;
 }
 .header.sticky {
-    border-bottom: .1rem solid linear-gradient(to bottom, rgba(73, 94, 129, 0.616), rgb(12, 19, 31));
+border-bottom: .1rem solid linear-gradient(to bottom, rgba(73, 94, 129, 0.616), rgb(12, 19, 31));
 }
-.logo img {
-    height:30%;
-    width:40% ;
-    margin: 10px;
-    padding: 30px 0 10px 0;
+.logo2 img {
+height:30%;
+width:40% ;
+margin: 10px;
+padding: 30px 0 10px 0;
+}
+.logo1 img{
+height:30%;
+width:40% ;
+margin: 10px;
+padding: 30px 0 10px 0;
+display:none;
 }
 .navbar{
-    width: 60%;
+width: 60%;
 }
 .navbar input{
-        width: 50%;
-        height: auto;
-        outline: none;
-        padding: 6px 15px;
-        margin: 10px 0 10px 0;
-        font-size: 1rem;
-        border-radius: 20px;
-        border: 1px solid #ccc;
+    width: 50%;
+    height: auto;
+    outline: none;
+    padding: 6px 15px;
+    margin: 10px 0 10px 0;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
 }
 
 .navbar button {
-    font-size: 0.9rem; 
-    color:#ffffff;
-    background: #24152c59;
-   margin: 10px;
-   padding: 10px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    transition: .3s;
+font-size: 0.9rem; 
+color:#ffffff;
+background: #24152c59;
+margin: 10px;
+padding: 10px;
+border-radius: 20px;
+border: none;
+cursor: pointer;
+transition: .3s;
 }
 .navbar button:hover{
-   color:#24152c;
-    background-image: linear-gradient(to bottom left ,rgb(254, 156, 127),rgb(200, 107, 152));
-    transition: .3s;
+color:#24152c;
+background-image: linear-gradient(to bottom left ,rgb(254, 156, 127),rgb(200, 107, 152));
+transition: .3s;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height:100%;
-    gap: 35px;
-    padding: 5% 8% 5% 8%;
-    background-color: rgba(36, 21, 44, 0.596);
-    z-index: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height:100%;
+gap: 35px;
+padding: 5% 8% 5% 8%;
+background-color: rgba(36, 21, 44, 0.596);
+z-index: 1;
 
 }
 .weather-data {
-    width: 100%;
+width: 100%;
 }
 .weather-data h4 {
-    margin-top: 12px;
-    font-size: 1rem;
-    font-weight: 400;
+margin-top: 12px;
+font-size: 1rem;
+font-weight: 400;
 }
 
 .current-weather { 
-    /*  background-image: linear-gradient(to bottom left, rgba(73, 94, 129, 0.623), rgb(12, 19, 31));*/
-    content: '';
-    position: relative;
-    color: #fff;
-    background: inherit;
-    overflow: hidden;
-    border-radius: 20px;
-    padding: 20px 70px 20px 20px;
-    justify-content: space-between;
-    display: flex;
-    box-shadow: inset 0 0 0 100px rgba(200, 107, 152, 0.233);
-    backdrop-filter: blur(10px);
+/*  background-image: linear-gradient(to bottom left, rgba(73, 94, 129, 0.623), rgb(12, 19, 31));*/
+content: '';
+position: relative;
+color: #fff;
+background: inherit;
+overflow: hidden;
+border-radius: 20px;
+padding: 20px 70px 20px 20px;
+justify-content: space-between;
+display: flex;
+box-shadow: inset 0 0 0 100px rgba(200, 107, 152, 0.233);
+backdrop-filter: blur(10px);
 }
 
-    
+
 
 .current-weather h2 {
-    font-size: 1rem;
+font-size: 1rem;
 }
 
 .current-weather .icon img {
@@ -134,16 +141,16 @@ color: #fff;
 }
 
 .weather-cards {
-font-size: 1rem;
 display: flex;
 gap: 20px;
 }
 
 .weather-cards .card {
+font: 0.6rem sans-serif;
 content: '';
 list-style: none;
-padding: 17px 15px;
-width: calc(90% / 5);
+padding: 15px 12px;
+width: calc(100% / 5);
 position: relative;
 color: #fff;
 background: inherit;
@@ -152,13 +159,19 @@ border-radius: 20px;
 box-shadow: inset 0 0 0 200px rgba(200, 107, 152, 0.233);
 backdrop-filter: blur(10px);
 }
-
+.weather-cards .card:hover{
+color: #24152c;
+background-image: linear-gradient(to bottom left ,rgba(254, 157, 127, 0.726),rgba(200, 107, 152, 0.712));
+transition: .3s;
+backdrop-filter: blur(10px);
+}
 .weather-cards .card img {
 max-width: 70px;
 margin: 5px 0 -12px 0;
 }
 
 @media (max-width: 1400px) {
+
 .weather-data .current-weather {
 padding: 20px;
 }
@@ -177,53 +190,75 @@ width: calc(90% / 3- 15px);
 }
 
 @media (max-width: 980px) {
-      .navbar {
-        width: 100%;
-      }
-    
-      .navbar input {
-        width: 45%;
-        font-size: 0.7rem;
-      }
-    
-      .navbar button {
-        width: 20%;
-        font-size: 0.6rem;
-        padding: 6px
-      }
+
+.logo2{
+width: 90%;
+}
+.logo1{
+display: none;
+}
+.navbar {
+width: 100%;
+}
+
+.navbar input {
+width: 45%;
+font-size: 0.6rem;
+}
+
+.navbar button {
+width: 20%;
+font-size: 0.6rem;
+padding: 7px
+}
 .weather-input {
 width: 450px;
 }
 .weather-cards .card {
-width: calc(95% / 2- 10px);
+width: calc(80% / 3- 10px);
 }
 }
 @media (max-width: 750px) {
-    .header {
-        padding: 10px;
-      }
-    
-      .navbar input {
-        width: 100%;
-      }
-    
-      .navbar button {
-        width: 100%;
-      }
+
+.logo2 img{
+display: none;
+}
+.logo1 img{
+ display: block;
+width: 40%;
+}
+.navbar{
+width: 100%;
+padding: 15px 5px;
+align-items: center;
+}
+
+.navbar input {
+width: 40%;
+font-size: 0.5rem;
+padding: 6px;
+border: none;
+}
+
+.navbar button {
+font-size: 0.5rem;
+padding: 6px;
+}
 .container {
 flex-wrap: wrap;
 }
-.weather-input {
-width: 100%;
+.weather-cards .card {
+padding: 10px;
+width: calc(80% / 2);
 }
 .weather-cards .card h4 {
-font-size: 0.8rem;
+font-size: 0.6rem;
 }
 .weather-cards .card h3 {
-font-size: 0.8rem;
+font-size: 0.6rem;
 }
 .weather-cards .card h2 {
-font-size: 1.3rem;
+font-size: 0.9rem;
 }
 }
 
