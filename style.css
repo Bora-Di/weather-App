@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Domine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
 
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-size: 1rem;
-font-family: 'Poppins', sans-serif;
+font-family: 'Hahmlet', sans-serif;
 }
 
 body {
@@ -38,18 +42,11 @@ z-index: 100;
 .header.sticky {
 border-bottom: .1rem solid linear-gradient(to bottom, rgba(73, 94, 129, 0.616), rgb(12, 19, 31));
 }
-.logo2 img {
+.logo img {
 height:30%;
 width:40% ;
 margin: 10px;
 padding: 30px 0 10px 0;
-}
-.logo1 img{
-height:30%;
-width:40% ;
-margin: 10px;
-padding: 30px 0 10px 0;
-display:none;
 }
 .navbar{
 width: 60%;
@@ -90,8 +87,9 @@ width: 100%;
 height:100%;
 gap: 35px;
 padding: 5% 8% 5% 8%;
-background-color: rgba(36, 21, 44, 0.596);
-z-index: 1;
+background-image: rgba(36, 21, 44, 0.596);
+
+z-index: 0;
 
 }
 .weather-data {
@@ -121,8 +119,16 @@ backdrop-filter: blur(10px);
 
 
 .current-weather h2 {
-font-size: 1rem;
+padding: 0px 400px;
+font-size: 1.3rem;
 }
+.current-weather .temp {
+    font-size: 1.3rem;
+    }
+.current-weather h4 {
+    align-items: center;
+    font-size: 0.9rem;
+ }
 
 .current-weather .icon img {
 max-width: 100px;
@@ -149,8 +155,8 @@ gap: 20px;
 font: 0.6rem sans-serif;
 content: '';
 list-style: none;
-padding: 15px 12px;
-width: calc(100% / 5);
+padding: 15px 15px;
+width: calc(90% / 5);
 position: relative;
 color: #fff;
 background: inherit;
@@ -172,6 +178,10 @@ margin: 5px 0 -12px 0;
 
 @media (max-width: 1400px) {
 
+.current-weather h2 {
+        padding: 0px 280px;
+        font-size: 1rem;
+        }
 .weather-data .current-weather {
 padding: 20px;
 }
@@ -179,23 +189,24 @@ padding: 20px;
 flex-wrap: wrap;
 }
 .weather-cards .card {
-width: calc(90% / 5- 15px);
+width: calc(90% / 5);
 }
 }
 
 @media (max-width: 1200px) {
+    .current-weather h2 {
+        padding: 0px 190px;
+        font-size: 0.9rem;
+        }
 .weather-cards .card {
-width: calc(90% / 3- 15px);
+width: calc(90% / 3);
 }
 }
 
 @media (max-width: 980px) {
 
-.logo2{
+.logo{
 width: 90%;
-}
-.logo1{
-display: none;
 }
 .navbar {
 width: 100%;
@@ -214,18 +225,21 @@ padding: 7px
 .weather-input {
 width: 450px;
 }
+.current-weather h2 {
+    padding: 0px 150px;
+    font-size: 0.9rem;
+    }
 .weather-cards .card {
-width: calc(80% / 3- 10px);
+width: calc(80% / 3);
 }
 }
 @media (max-width: 750px) {
 
-.logo2 img{
+
+.logo{
+/*top: 0%;
+width: 80%;*/
 display: none;
-}
-.logo1 img{
- display: block;
-width: 40%;
 }
 .navbar{
 width: 100%;
@@ -247,6 +261,13 @@ padding: 6px;
 .container {
 flex-wrap: wrap;
 }
+.current-weather .details h2{
+    padding: 0px 80px;
+    font-size: 0.7em;
+}
+.current-weather .details h4{
+    font-size: 0.6em;
+}
 .weather-cards .card {
 padding: 10px;
 width: calc(80% / 2);
@@ -258,7 +279,7 @@ font-size: 0.6rem;
 font-size: 0.6rem;
 }
 .weather-cards .card h2 {
-font-size: 0.9rem;
+font-size: 0.8rem;
 }
 }
 
